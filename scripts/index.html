@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #262626, #006400);
+        }
+
+        .container {
+            text-align: center;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        img {
+            margin-top: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            margin-top: 10px;
+            color: white;
+        }
+
+        .time {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .progresscontainer {
+            margin-top: 20px;
+            margin-left: 10px; /* Adjusted margin-left */
+            width: calc(90%); /* Adjusted width to compensate for the margin */
+            max-width: 300px;
+            height: 5px;
+            background-color: #333;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progressbar {
+            width: 0;
+            height: 100%;
+            background-color: #007bff;
+        }
+
+        .icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .icons i {
+            font-size: 24px;
+            color: #666;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .icons i:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <audio src="scripts/audio/image-1.mp3"></audio>
+        <img src="scripts/images/image-1.jpg" width="300px" height="300px"/>
+        <h3>Modern talking</h3>
+        <div class="time">
+            <div class="currenttime">0:00</div>
+            <div class="totalduration">2:56</div>
+        </div>
+        <div class="progresscontainer">
+            <div class="progressbar"></div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-backward" id="backward"></i>
+            <i class="fas fa-play" id="play"></i>
+            <i class="fas fa-forward" id="forward"></i>
+            <i class="fas fa-heart" id="like"></i>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
