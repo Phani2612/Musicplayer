@@ -8,7 +8,7 @@ App.use("/scripts" , Express.static("scripts"))
 
 const Filesystem = require('fs')
 
-App.get('/app' , function(req,res)
+App.get('' , function(req,res)
 {
     res.sendFile(__dirname+'/scripts/index.html')
 
